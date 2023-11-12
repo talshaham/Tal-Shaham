@@ -36,9 +36,9 @@ Board(choose);
 /*you can be a winner in this game just after your turn, thats why
 there is just 1 and same 'function win' for both players*/
 if(win(choose,count)==1){
-printf("\n\nplayer 1 ('X') is the winner!!!\n\n\n");
+printf("\n\nPlayer 1 ('X') is the winner!!!\n\n\n");
 flag_tie=1;// not a tie
-printf("\n\ndo you want to play again?\nplease eneter a number (1=YES,0=NO) ");
+printf("\n\nDo you want to play again?\nplease eneter a number (1=YES,0=NO) ");
 scanf("%d",&flag_play_again);
 break;
 }
@@ -54,17 +54,17 @@ system("cls");
 Board(choose);
 
 if(win(choose,count)==1){
-printf("\n\nplayer 2 ('O') is the winner!!!\n\n\n");
+printf("\n\nPlayer 2 ('O') is the winner!!!\n\n\n");
 flag_tie=1;
-printf("\n\ndo you want to play again?\nplease eneter a number (1=YES,0=NO) ");
+printf("\n\nDo you want to play again?\nplease eneter a number (1=YES,0=NO) ");
 scanf("%d",&flag_play_again);
 break;
 }
 }
 
 if(flag_tie==0)// check for tie
-printf("\n\nits a tie");
-printf("\n\ndo you want to play again?\nplease eneter a number (1=YES,0=NO) ");
+printf("\n\nIts a tie");
+printf("\n\nDo you want to play again?\nplease eneter a number (1=YES,0=NO) ");
 scanf("%d",&flag_play_again);
 }
 
@@ -84,15 +84,15 @@ printf("\nGAME OVER\n");
 
 /* the %c are spaces in the beginning and after each scan they become 'X'/'O'*/
 void Board(char *choose) {
-   printf("\n\n     tic tac toe GAME");
+   printf("\n\n     Tic Tac Toe GAME");
    printf("\n\n1       |2       |3\n   %c    |   %c    |    %c\n        |        | \n---------------------------\n4       |5       |6\n   %c    |   %c    |    %c\n        |        |\n---------------------------\n7       |8       |9\n   %c    |   %c    |    %c\n        |        |\n\n",choose[1],choose[2],choose[3],choose[4],choose[5],choose[6],choose[7],choose[8],choose[9]);
 }
 
 void player_1_turn(){
-   printf("player 1 ('X') turn\nenter a number: ");
+   printf("Player 1 ('X') turn\nenter a number: ");
 }
 void player_2_turn(){
-   printf("player 2 ('O') turn\nenter a number: ");
+   printf("Player 2 ('O') turn\nenter a number: ");
 
 }
 
@@ -106,13 +106,13 @@ void scan_1(char *choose){
    scanf("%d",&l);
       if(l>9||l<1)// check that the 'int l' or the chosen number at the tanle is between 1-9
    {
-    printf("\n**please pick a number between 1-9**\nenter a number");
+    printf("\n**Please pick a number between 1-9**\nenter a number");
    continue;
    }
     flag_boundries=0;// check that the scan location in the array is free (not 'X' or 'O')
    if(*(choose+l)=='O'||*(choose+l)=='X')
    {
-   printf("\n**please pick another number that didnt picked before**\nenter a number");
+   printf("\n**Please pick another number that didnt picked before**\nenter a number");
    continue;
    }
    flag_picked=0;
@@ -129,13 +129,13 @@ int l, flag_picked=1, flag_boundries=1;
    scanf("%d",&l);
       if(l>9||l<1)
    {
-    printf("\n**please pick a number between 1-9**\nenter a number");
+    printf("\n**Please pick a number between 1-9**\nenter a number");
    continue;
    }
     flag_boundries=0;
    if(*(choose+l)=='O'||*(choose+l)=='X')
    {
-   printf("\n**please pick another number that didnt picked before**\nenter a number");
+   printf("\n**Please pick another number that didnt picked before**\nenter a number");
    continue;
    }
    flag_picked=0;
